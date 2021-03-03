@@ -37,7 +37,7 @@ header{
  }
 nav{
   max-width: 1920px;
-  padding:3vw;
+  padding:5vh;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -74,6 +74,58 @@ header ul li:last-child a{
 
 
 
+.hero{
+  position: relative;
+  min-height: 90vh;
+  background: url("./img/donovan-reeves-gZzUo--BTZ4-unsplash.jpg") no-repeat center center/cover;
+}
+.hero::after{
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.4;
+}
+.hero-text{
+  position: absolute;
+  width: 100%;
+  top: 70%;
+  left: 50%;
+  z-index: 5;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+.hero h2{
+  
+  font-size: 4rem;
+  color: #fff;
+  text-align: center;
+  font-family: bebas-neue-by-fontfabric;
+  letter-spacing: 5px;
+}
+.hero a{
+  display: inline-block;
+  padding: 2rem 6rem;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  background: #000;
+  color: #fff;
+  font-size: 1.8rem;
+  letter-spacing: 5px;
+  margin-top: 3rem;
+  transform: translateX(-23%);
+  transition: all .4s;
+}
+.hero a:hover{
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+
+
 .main-wrap{
   display: flex;
   align-items: center;
@@ -94,34 +146,28 @@ main h1{
  position:relative;
  flex: 1 1 45%;
  max-width: 70rem;
+ min-width: 40rem;
  margin: 0 1rem;
  margin-bottom: 5rem;
- height: 25rem;
+ height: 30rem;
 }
 /* .chapter:nth-child(odd){
   margin-right: 1rem;
 } */
 img{
-  top: 0;
-  left: 0;
   width: 100%;
+  height: 70%;
   display: block;
   transition: all .4s ease-in-out;
 }
 .chapter:hover img{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 150%;
   height: 150%;
-  opacity: .5;
-}
-.chapter:hover h2{
-  margin-top: 20%;
-  font-size:2.5rem;
-  color: rgb(0, 0, 0);
-  font-weight: 400;
-  text-transform: uppercase;
+  width:150%;
+  opacity: .7;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translateX(-20%);
 }
 .chapter h2{
   /* font-family: bebas-neue-by-fontfabric; */
@@ -130,12 +176,24 @@ img{
   text-align: center;
   color: #797777;
   font-weight: 100;
-  margin-top:3rem;
+  margin-top: 3rem;
 
-  /* font-size: 2rem; */
 }
 
+.chapter:hover h2{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size:2.5rem;
+  color: rgb(0, 0, 0);
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 0;
+  transform: translate(-50%,-50%);
+}
 
 @media (min-height:1920px){
- 
+ body{
+
+ }
 }
