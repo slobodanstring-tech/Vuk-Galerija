@@ -1,3 +1,8 @@
+<!-- Ako hoces da dodas neke elemente u kontejner neki ili slicno,a ZABORAVIO SI...
+  SELEKTUJES sta hoces da bude unutar tog novog kontejnera,
+  pritisnes CTRL + SHIFT + P i ukucas "Wrap with Abbreviation" 
+ izadje ti input gde napises kako ce da se zove taj novi div u kome ce da stoje elementi koje si selektovao i to je to-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,57 +18,43 @@
 </head>
 <body>
   <header>
-    <nav>
-      <div class="logo">
-        <a href="">Vuk Ljubisavljevic</a>
-      </div>
-      <ul>
-        <li><a href="">Galleryes</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Contact</a></li>
-        <li><a href="">virtual museum</a></li>
-        <li><a href="">thought</a> </li>
-      </ul>
-    </nav>
+    <div class="container">
+      <nav>
+        <img class="hamburger" src="./iconmonstr-menu-1.svg" alt="">
+        <div class="logo">
+          <a href="./index.html">Vuk Ljubisavljevic</a>
+        </div>
+        <ul>
+          <li><a href="./index.html">Home</a> </li>
+          <li><a href="./galery.html">Galleryes</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">virtual museum</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-   <div class="hero">
-     <div class="hero-text">
-        <h2>Neka bude borba neprestana <span>neka bude sta biti ne moze!</span></h2>
-     <a href="">Galery</a>
-     </div>
-    
-   </div>
+    	<div class="hero">
+    	    <h2>Neka bude borba neprestana neka bude sta biti ne moze!</h2>
+    	</div>
   <main>
-    <section class="main">
-      <h1>Galleryes</h1>
-      <div class="main-wrap">
-        <div class="chapter"><img src="https://static.wixstatic.com/media/9d4e31_4f3af72d01bc49d2baf86b5fd3d2dd01~mv2.jpg/v1/fill/w_606,h_179,al_c,q_80,usm_2.00_1.00_0.00/9d4e31_4f3af72d01bc49d2baf86b5fd3d2dd01~mv2.webp" alt="">
-          <h2>Ni na nebu ni na zemlji</h2>
+    <section class="thought">
+        <h2>My crazy thoughts</h2>
+        <div class="row">
+          <div class="left-side">
+            <img src="./img/alessio-lin-nwxK2Znr-is-unsplash.jpg" alt="">
+          </div>
+          <div class="right-side">
+            <h2>Lorem ipsum dolor, sit amet consectetur porro?</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione praesentium iure iusto quia cum accusantium sapiente expedita optio aliquam possimus aliquid repellat doloremque consequuntur facere corporis maxime earum debitis impedit dolores, illum dolor! Natus, voluptate.
+            Pariatur cumque saepe explicabo? Iste magni, et voluptatum iure unde cum eaque sed atque repellendus, ab quae nemo, totam cumque hic voluptate? Eum fugiat laboriosam nobis atque quasi? Possimus quisquam aliquam ducimus, sint magni culpa?
+            Nihil, non distinctio perferendis dicta maxime ullam possimus culpa! Reprehenderit omnis perferendis nihil quod inventore consectetur quasi eius rerum est, blanditiis porro voluptatibus suscipit commodi veritatis aliquam id, asperiores architecto, quo neque explicabo assumenda at.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione praesentium iure iusto quia cum accusantium sapiente expedita optio aliquam possimus aliquid repellat doloremque consequuntur facere corporis maxime earum debitis impedit dolores, illum dolor! Natus, voluptate.
+            </p>
+          </div>
         </div>
-        <div class="chapter"><img src="https://static.wixstatic.com/media/9d4e31_9e0130b4f35f4edeb8997bb8aa704c3a~mv2.jpg/v1/fill/w_606,h_179,al_c,q_80,usm_2.00_1.00_0.00/9d4e31_9e0130b4f35f4edeb8997bb8aa704c3a~mv2.webp" alt="">
-          <h2>Ni na nebu ni na zemlji</h2>
-        </div>
-        <div class="chapter"><img src="https://static.wixstatic.com/media/9d4e31_abc9f6a4b0cb444b9b926f93b6f960a2~mv2.jpg/v1/fill/w_606,h_179,al_c,q_80,usm_2.00_1.00_0.00/9d4e31_abc9f6a4b0cb444b9b926f93b6f960a2~mv2.webp" alt="">
-          <h2>Ni na nebu ni na zemlji</h2>
-        </div>
-        <div class="chapter"><img src="https://static.wixstatic.com/media/9d4e31_1a94df089a15442f99ff7c4454a1bb3b~mv2_d_2790_1474_s_2.jpg/v1/fill/w_606,h_179,al_c,q_80,usm_2.00_1.00_0.00/9d4e31_1a94df089a15442f99ff7c4454a1bb3b~mv2_d_2790_1474_s_2.webp" alt="">
-          <h2>Ni na nebu ni na zemlji</h2>
-        </div>
-        <div class="chapter"><img src="https://static.wixstatic.com/media/9d4e31_5885c0321c0641e49b7d0c2caaf31f0a~mv2_d_2372_1391_s_2.jpg/v1/fill/w_606,h_179,al_c,q_80,usm_2.00_1.00_0.00/9d4e31_5885c0321c0641e49b7d0c2caaf31f0a~mv2_d_2372_1391_s_2.webp" alt="">
-          <h2>Ni na nebu ni na zemlji</h2>
-        </div>
-        <div class="chapter"><img src="https://static.wixstatic.com/media/9d4e31_a67e76d31c344fb0a207bf7008f344f7~mv2.jpg/v1/fill/w_606,h_179,al_c,q_80,usm_2.00_1.00_0.00/9d4e31_a67e76d31c344fb0a207bf7008f344f7~mv2.webp" alt="">
-          <h2>Ni na nebu ni na zemlji</h2>
-        </div>
-        <div class="chapter"><img src="https://static.wixstatic.com/media/9d4e31_3502a2d34d75452583d0ce02370a200a~mv2_d_2616_1387_s_2.jpg/v1/fill/w_606,h_179,al_c,q_80,usm_2.00_1.00_0.00/9d4e31_3502a2d34d75452583d0ce02370a200a~mv2_d_2616_1387_s_2.webp" alt="">
-          <h2>Ni na nebu ni na zemlji</h2>
-        </div>
-        <div class="chapter"><img src="https://static.wixstatic.com/media/9d4e31_5e68493dab6c4a10b9b901ca88155bf7~mv2_d_2319_1255_s_2.jpg/v1/fill/w_606,h_179,al_c,q_80,usm_2.00_1.00_0.00/9d4e31_5e68493dab6c4a10b9b901ca88155bf7~mv2_d_2319_1255_s_2.webp" alt="">
-          <h2>Ni na nebu ni na zemlji</h2>
-        </div>
-      </div>
-      
     </section>
   </main>
+  <script src="hamburger.js"></script>
 </body>
 </html>
