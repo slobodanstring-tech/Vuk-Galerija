@@ -40,6 +40,10 @@ h1,h2,h3{
   margin-inline: auto; /* margin-inline:auto;    dodaje margine samo na bocnim stranicama ___3*/
   width: min(90%,1920px);/*kaze da je minimalna duzina 90% od duzine viewporta, ali da tih 90% moze da bude maximalno 1920px ___4*/
 }
+p{
+  line-height: 1.5;
+  color: #797777;
+}
 
 
 header{
@@ -52,7 +56,6 @@ header{
   min-height: 10vh;
  }
 nav{
-  position: relative;
   padding:5vh 0;
   display: flex;
   flex-wrap: wrap;
@@ -93,27 +96,36 @@ header ul li:last-child a{
 }
 .hamburger{
   display: none;
-  position: absolute;
+  position: fixed;
   width: 2.5rem;
   height: 2.5rem;
-  top: 50%;
-  right: 0%;
+  top: 6%;
+  right: 5%;
   transform: translate(-50%,-50%);
+  z-index: 20;
 }
-.open{
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
+
+
+.header-relative{
+  position: relative;
+}
+
+.mobil-ul{
+  background-color: rgb(255, 255, 255);
+  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  align-items:center;
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 30% 0;
+  transition: all 1.5s;
+  font-size: 2.3rem;
+  transition: all 1s ease-out;
 }
-
 .hero{
   position: relative;
   min-height: 90vh;
@@ -158,7 +170,7 @@ main h1{
   font-weight: 800;
   letter-spacing: 5px;
   margin: 5vw auto;
-  color: var(--clr-text-light);
+  color: var(--clr-neutral-900);
 }
 .chapter{
  overflow: hidden;
@@ -210,54 +222,6 @@ main h1{
   margin-top: 0;
   transform: translate(-50%,-50%);
 }
-
-
-@media (max-width:988px){
-  /* html{
-    font-size: 50%;
-  } */
-   .logo {
-    text-align: center;
-    margin-bottom: 1em;/*___6-Kada se stavi na neki text em umesto rem onda je margina velicinie slova tog texta*/
-  }
-  ul{
-    justify-content: center;
-    text-align: center;
-    width: 90%;
-  } 
-  .hero h2{
-    width: 80%;
-  }
-}
-@media (max-width:610px){
-  html{
-    font-size: 50%;
-  }
-}
-@media (max-width:480px){
-  .logo{
-    text-align: start;
-    margin-bottom: 0;
-  }
-  .hamburger{
-    display: block;
-  }
-  ul{
-    display: none;
-  }
- 
-  .hero h2{
-    width: 100%;
-    font-size: 3rem;
-    padding: 0 .3rem;
-  }
-}
-
-
-
-
-
-
 .thought{
   max-width: 1920px;
   margin: 0 auto;
@@ -296,7 +260,7 @@ main h1{
   order: 1;
   flex: 1 1 40rem;
   padding: 5%;
-  text-align: center;
+  text-align: left;
 }
 .right-side p{
   line-height: 1.3em;
@@ -308,16 +272,206 @@ main h1{
 
 .About img{
   width: 100%;
+  height: 90vh;
+  object-fit: cover;
 }
 .About h3{
   text-align: center;
   margin: 5rem auto;
-  font-size: 2.2rem;
-  width: 90%;
+  font-size: 3.3rem;
 }
 .About .text-container{
-  padding:5%;
+  padding:5% 0;
 }
+.About p{
+  margin-bottom: 1em;
+}
+
+.contact h3{
+  font-family: var(--ff-accent-2);
+  text-align: center;
+  font-size: 4rem;
+  margin-block: 1em;
+  letter-spacing: 5px;
+}
+.contact p{
+  margin-bottom: 1em;
+}
+.contact .bold{
+  color: #000;
+  font-weight: bold;
+}
+form {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5vh 0;
+}
+.form-wrap{
+  max-width: 1150px;
+  margin: 0 auto;
+}
+form .name ,
+form .l-name {
+  max-width: 48%;
+}
+form .l-name{
+  margin-left: auto;
+}
+form .input-box,
+form textarea{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom:2rem;
+  width: 100%;
+}
+
+
+.input-box input,
+.input-box textarea{
+  min-width: 100%;
+  padding: .5rem 1rem;
+  height: 4rem;
+  background-color: #fafafa;
+  border: 1px solid #ccc;
+  max-width: 40rem;
+  outline-color: black;
+  border-radius: 2px;
+}
+.input-box textarea{
+  height: 20rem;
+}
+.input-box label{
+margin-bottom: 1rem;
+}
+.btn{
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  border-radius: 500px;
+  font-family: var(--ff-accent);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  padding: .8em 2.3em;
+  border-width: 0;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  transition: all .2s;
+}
+.btn:hover{
+  opacity: .7;
+}
+
+.section-wrap{
+  display: flex;
+  flex-direction: column;
+}
+.section-wrap .img-container{
+  width: 100%;
+  height: 50vh;
+  margin-bottom: 5vh;
+  position: relative;
+  background-color: #000;/* __8-Ovako se pravi overlay kad imas img, a ne background*/
+  animation: anima2 1s ease-out;
+}
+.section-wrap img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  opacity: .7;
+}
+.section-wrap h2{
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 3rem;
+  animation: anima .5s ease-out;
+  z-index: 5;
+  padding-left: 1rem;
+}
+@keyframes anima{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes anima2{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@media (max-width:988px){
+  /* html{
+    font-size: 50%;
+  } */
+   .logo {
+    text-align: center;
+    margin-bottom: 1em;/*___6-Kada se stavi na neki text em umesto rem onda je margina velicinie slova tog texta*/
+  }
+  ul{
+    justify-content: center;
+    text-align: center;
+    width: 90%;
+  } 
+  .hero h2{
+    width: 80%;
+  }
+}
+@media (max-width:610px){
+  html{
+    font-size: 50%;
+  }
+  .About .text-container{
+    font-size: 2rem;
+  }
+}
+@media (max-width:480px){
+  nav{
+    position: static;
+  }
+  .logo{
+    text-align: start;
+    margin-bottom: 0;
+  }
+  .hamburger{
+    display: block;
+  }
+ 
+  ul{
+    display: none;
+    transition: all 1s;
+  }
+ 
+  .hero h2{
+    width: 100%;
+    font-size: 3rem;
+    padding: 0 .3rem;
+  }
+  .a{
+    font-size: 5rem;/*Mora da se stavi samo u @media da ne bi delovalo na velikom viewportu*/
+  }
+  form .name ,
+form .l-name {
+  max-width: 100%;
+}
+}
+
+
+
+
+
+
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape){
   .logo{
@@ -334,4 +488,6 @@ main h1{
   .hero{
     min-height: 80vh;
   }
+  
 }
+
