@@ -34,7 +34,7 @@ ul{
   list-style: none;
 }
 h1,h2,h3{
-  line-height: 1; /*__3-Naslovi kad se sloze u dva reda budu mnogo odaljeni,pa se zato smanji lineheight*/
+  line-height: 1; /*___9-Naslovi kad se sloze u dva reda budu mnogo odaljeni,pa se zato smanji lineheight*/
 }
 .container{
   margin-inline: auto; /* margin-inline:auto;    dodaje margine samo na bocnim stranicama ___3*/
@@ -83,7 +83,7 @@ header ul a{
   color: var(--clr-text-light);
   letter-spacing: .248rem;
   font-weight: 400;
-  font-family: var(--ff-accent);
+  font-family: var(--ff-accent-2);
   padding: 0 1.5rem;
   transition: .5s;
   white-space: nowrap;/*___5-To postavis da se nebi dve reci prebacile jedna ispod druge kad smanjujes viewport*/
@@ -304,6 +304,20 @@ main h1{
   color: #000;
   font-weight: bold;
 }
+.contact .social-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact .social-container > *{
+  height: 3rem;
+}
+.contact .social-container > * + *{
+  margin-left: 2rem;
+}
+.contact .social-container > * + *:hover{
+  opacity: 0.7;
+}
 form {
   display: flex;
   flex-wrap: wrap;
@@ -341,6 +355,14 @@ form textarea{
   max-width: 40rem;
   outline-color: black;
   border-radius: 2px;
+  caret-color: red;/*___9-biras boju linije u inputu */
+  margin-top: auto;
+  font-size: 2.2rem;
+}
+.input-box input::placeholder{/*___10-Ovako stilizujes placeholder*/
+  color: rgba(8, 8, 8, 0.171);
+  font-size: 1.2rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .input-box textarea{
   height: 20rem;
@@ -363,6 +385,7 @@ margin-bottom: 1rem;
   cursor: pointer;
   outline: none;
   transition: all .2s;
+  margin-right: auto;
 }
 .btn:hover{
   opacity: .7;
@@ -377,15 +400,15 @@ margin-bottom: 1rem;
   height: 50vh;
   margin-bottom: 5vh;
   position: relative;
-  background-color: #000;/* __8-Ovako se pravi overlay kad imas img, a ne background*/
-  animation: anima2 1s ease-out;
+  background-color: #000;/* ___8-Ovako se pravi overlay kad imas img, a ne background*/
 }
 .section-wrap img{
   width: 100%;
   height: 100%;
   object-fit: cover;
   position: relative;
-  opacity: .7;
+  animation: anima2 3s ease-out forwards;
+  
 }
 .section-wrap h2{
   position: absolute;
@@ -394,15 +417,19 @@ margin-bottom: 1rem;
   transform: translateY(-50%);
   color: #fff;
   font-size: 3rem;
-  animation: anima .5s ease-out;
+  animation: anima .7s 1s ease-in-out forwards;
   z-index: 5;
   padding-left: 1rem;
+  opacity: 0;
+  font-family: "Roboto",sans-serif;
 }
 @keyframes anima{
   0%{
+    transform: translateX(-200%);
     opacity: 0;
   }
   100%{
+    transform: translateX(0%);
     opacity: 1;
   }
 }
@@ -411,7 +438,7 @@ margin-bottom: 1rem;
     opacity: 0;
   }
   100%{
-    opacity: 1;
+    opacity: .4;
   }
 }
 @media (max-width:988px){
@@ -420,7 +447,7 @@ margin-bottom: 1rem;
   } */
    .logo {
     text-align: center;
-    margin-bottom: 1em;/*___6-Kada se stavi na neki text em umesto rem onda je margina velicinie slova tog texta*/
+    margin-bottom: 1em;/*___10-Kada se stavi na neki text em umesto rem onda je margina velicinie slova tog texta*/
   }
   ul{
     justify-content: center;
